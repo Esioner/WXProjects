@@ -1,0 +1,31 @@
+/* pages/selectedjoke/selectedjoke.wxss */
+
+.root-view {
+  width: 100%;
+  height: 100%;
+}
+
+.swipe-tab {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 20%;
+  border-bottom: 2rpx solid #777;
+  text-align: center;
+  line-height: 80rpx;
+}
+
+.swipe-tab-item {
+  width: 50%;
+  font-size: 18px;
+}
+
+.swipe-view {
+  display: block;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.swipe-item-view {
+  height: 100%;
+}

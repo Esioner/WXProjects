@@ -1,0 +1,63 @@
+/* pages/zhihunews/zhihunews.wxss */
+
+.top-news-swiper {
+  width: 750rpx;
+  height: 500rpx;
+}
+
+.swiper-item-view {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-news-image {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.swiper-news-title {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  position: absolute;
+  font-size: 16px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  z-index: 100;
+}
+
+.list-item-view {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.list-item-image-view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 2;
+  margin-right: 10px;
+}
+
+.list-item-image {
+  width: 100px;
+  height: 100px;
+}
+
+.list-item-title-view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 5;
+}
+
+.list-item-title {
+  font-size: 22px;
+}

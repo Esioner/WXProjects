@@ -1,0 +1,42 @@
+<!--pages/meiriyiju/meiriyiju.wxml-->
+<view class='root-view'>
+  <view class='image-tag-view'>
+    <image class='image' src='{{requestData.picture2}}' mode='aspectFit'></image>
+    <!--标签  -->
+    <view class='tag-view'>
+      <image class='image-direction-left' src='../../res/image/icon_direction_left.png' bindtap='getPreDate'></image>
+      <view hidden="{{requestData.tags[0].id==null}}" style=''>
+        <view class='tag-view'>
+          <text class='tag-text'>标签：</text>
+          <view wx:for='{{requestData.tags}}'>
+            <text class='tag'>{{item.name}}</text>
+          </view>
+        </view>
+      </view>
+      <image class='image-direction-right' src='../../res/image/icon_direction_right.png' bindtap='getNextDate'></image>
+    </view>
+
+  </view>
+  <!--英文  -->
+  <view bindtap='speakContent'>
+    <audio id='contentSpeaker' src='{{requestData.tts}}' binderror='audioError' bindplay='audioPlay' bindpause='audioPause' bindended='audioEnded'></audio>
+    <image src='../../res/image/speaker_icon.png' class='speaker-icon'></image>
+    <text class='text-content'>{{requestData.content}}</text>
+  </view>
+  <!--译文  -->
+  <view>
+    <text class='text-note'>译文：{{requestData.note}}</text>
+  </view>
+  <!--编者寄语  -->
+  <view class='editor-words-view'>
+    <view>
+      <text class='text-editor-words'>小编寄语：</text>
+    </view>
+    <view>
+      <text class='text-trans'>{{requestData.translation}}</text>
+    </view>
+  </view>
+</view>
+<toast hidden="{{toastHidden}}" duration="1000" bindchange="onToastChanged">
+  {{toastText}}
+</toast>

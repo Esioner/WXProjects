@@ -1,0 +1,8 @@
+<!--pages/zhihu/newsdetail/newsdetail.wxml-->
+<view>
+  <!-- <rich-text node='{{newsData}}'>
+  </rich-text> -->
+   <web-view src="{{url}}"></web-view> 
+  <!-- <import src="../../../wxParse/wxParse.wxml" />
+  <template is="wxParse" data="{{wxParseData:news.nodes}}" /> -->
+</view>

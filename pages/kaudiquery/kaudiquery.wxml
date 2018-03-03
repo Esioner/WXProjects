@@ -1,0 +1,25 @@
+<!--pages/kaudiquery/kaudiquery.wxml-->
+<view class='title-view'>快递查询</view>
+<view class='kuaidi-number-view'>
+  <text>快递单号:</text>
+  <input type='number' value='888364670621020348' placeholder='请输入快递单号' focus='{{true}}' confirm-type='完成' confirm-hold='{{false}}' bindblur='inputComplete'></input>
+</view>
+<view>
+  <radio-group class="radio-group" bindchange="radioChange">
+    <label class="radio" wx:for="{{kuaidiNameArray}}">
+      <radio class='radio-item-view' value="{{item.value}}" checked="{{item.checked}}" />{{item.name}}
+    </label>
+  </radio-group>
+</view>
+<view>
+  <button bindtap='startQuery' loading='{{isQuerying}}'>查询</button>
+</view>
+<view hidden='{{kaudiDetail.data.length !== 0}}'>{{kaudiDetail.message}}</view>
+<view>快递详情</view>
+<block wx:for='{{kaudiDetail.data}}'>
+  <view class='kuaidi-detail-item-view'>
+    <view>{{item.time}}</view>
+    <view>{{item.context}}</view>
+    <view class='divider'></view>
+  </view>
+</block>

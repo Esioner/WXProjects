@@ -1,0 +1,59 @@
+<view class='main-page' style='background:{{selectBackground}};'>
+  <text class='article-title' style='font-size:{{selectTextSize.titleSize}};'>{{article_title}}</text>
+  <view class='text-divider'></view>
+  <text class='article-author' style='font-size:{{selectTextSize.authorSize}};'>{{article_author}}</text>
+  <text class='article-content' space='nbsp' style='font-size:{{selectTextSize.articleSize}};'>{{article_content}}</text>
+  <view class='text-divider'></view>
+  <text class='article-author' space='nbsp'>全文完    共{{wc}}个字</text>
+  <view class='bottom-bar'>
+    <button type='primary' size='mini' loading='{{preDateLoading}}' bindtap='getPreArticle'>前一天</button>
+    <!--{{formatDate.preDate}}  -->
+    <button type='primary' size='mini' bindtap='openSetting'>阅读设置</button>
+    <button type='primary' size='mini' bindtap='randomReading'>随机阅读</button>
+    <button type='primary' size='mini' loading='{{nextDateLoading}}' bindtap='getNextArticle'>后一天</button>
+    <!--{{formatDate.nextDate}}  -->
+  </view>
+</view>
+<toast hidden="{{toastHidden}}" duration="1000" bindchange="onToastChanged">
+  {{toastText}}
+</toast>
+<!-- bindtap="hideModal" -->
+<view class="modal" wx:if="{{showModalStatus}}">
+  <view class='read-settiong-view'>
+    <view class='back-setting-view'>
+      <text class='read-settiong-title'>阅读设置</text>
+      <text bindtap='hideModal'>確定</text>
+    </view>
+    <view class='choose-text-size'>
+      <text>字体大小</text>
+      <view class='text-size-selection-item'>
+        <view class='text-size-small' id='{{textSizeArray[0].id}}' style="{{textSizeArray[0].checked?'background:#000;color:#fff':'background:#FFF;color:#000'}}" bindtap='setTextSize'>小</view>
+        <view class='text-size-medium' id='{{textSizeArray[1].id}}' style="{{textSizeArray[1].checked?'background:#000;color:#fff':'background:#FFF;color:#000'}}" bindtap='setTextSize'>中</view>
+        <view class='text-size-large' id='{{textSizeArray[2].id}}' style="{{textSizeArray[2].checked?'background:#000;color:#fff':'background:#FFF;color:#000'}}" bindtap='setTextSize'>大</view>
+      </view>
+    </view>
+
+    <view class='choose-background-color'>
+      <text>背景颜色</text>
+      <view class='color-selection-item'>
+        <view class='color-view' id='{{colorArrays[0].key}}' style='background:{{colorArrays[0].value}}' bindtap='setBackground'>
+          <image class='cover-view' src="{{colorArrays[0].checked?' ../../res/image/icon_right.png':''}}"></image>
+        </view>
+        <view class='color-view' id='{{colorArrays[1].key}}' style='background:{{colorArrays[1].value}} ' bindtap='setBackground'>
+          <image class='cover-view ' src="{{colorArrays[1].checked?' ../../res/image/icon_right.png ':' '}}"></image>
+        </view>
+        <view class='color-view ' id='{{colorArrays[2].key}}' style='background:{{colorArrays[2].value}}' bindtap='setBackground'>
+          <image class='cover-view' src="{{colorArrays[2].checked?' ../../res/image/icon_right.png':''}}"></image>
+        </view>
+        <view class='color-view' id='{{colorArrays[3].key}}' style='background:{{colorArrays[3].value}} ' bindtap='setBackground'>
+          <image class='cover-view ' src="{{colorArrays[3].checked?' ../../res/image/icon_right.png ':' '}}"></image>
+        </view>
+        <!-- <view class='color-view-item '>
+          <view class='color-view '>
+          </view>
+        </view> -->
+      </view>
+    </view>
+  </view>
+</view>
+<view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}"></view>

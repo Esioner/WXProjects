@@ -1,0 +1,99 @@
+<view>
+
+  <scroll-view class='scroll-view-tab' scroll-x scroll-left='{{scrollLeft}}'>
+    <view class="tab-item {{currentTab == categorys[0].id?'active':''}}" id='0' bindtap='chooseTab'>热点</view>
+    <view class="tab-item {{currentTab == categorys[1].id?'active':''}}" id='1' bindtap='chooseTab'>社会</view>
+    <view class="tab-item {{currentTab == categorys[2].id?'active':''}}" id='2' bindtap='chooseTab'>娱乐</view>
+    <view class="tab-item {{currentTab == categorys[3].id?'active':''}}" id='3' bindtap='chooseTab'>科技</view>
+    <view class="tab-item {{currentTab == categorys[4].id?'active':''}}" id='4' bindtap='chooseTab'>汽车</view>
+    <view class="tab-item {{currentTab == categorys[5].id?'active':''}}" id='5' bindtap='chooseTab'>体育</view>
+    <view class="tab-item {{currentTab == categorys[6].id?'active':''}}" id='6' bindtap='chooseTab'>财经</view>
+    <view class="tab-item {{currentTab == categorys[7].id?'active':''}}" id='7' bindtap='chooseTab'>军事</view>
+    <view class="tab-item {{currentTab == categorys[8].id?'active':''}}" id='8' bindtap='chooseTab'>国际</view>
+    <view class="tab-item {{currentTab == categorys[9].id?'active':''}}" id='9' bindtap='chooseTab'>图片</view>
+    <view class="tab-item {{currentTab == categorys[10].id?'active':''}}" id='10' bindtap='chooseTab'>视频</view>
+    <view class="tab-item {{currentTab == categorys[11].id?'active':''}}" id='11' bindtap='chooseTab'>段子</view>
+    <view class="tab-item {{currentTab == categorys[12].id?'active':''}}" id='12' bindtap='chooseTab'>趣图</view>
+    <view class="tab-item {{currentTab == categorys[13].id?'active':''}}" id='13' bindtap='chooseTab'>问答</view>
+  </scroll-view>
+  <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab" style="height:{{winHeight}}rpx">
+    <swiper-item>
+      <scroll-view scroll-y="true" class="scoll-h">
+        <!--整个新闻item  -->
+        <view class='news-item-view'>
+          <view>
+            <image class='news-image' src='http://p1.pstatp.com/thumb/97d001bf3f3cba72913'>
+
+            </image>
+          </view>
+
+        </view>
+      </scroll-view>
+    </swiper-item>
+    <swiper-item>
+      <scroll-view scroll-y="true" class="scoll-h">
+        <view>社会</view>
+      </scroll-view>
+    </swiper-item>
+    <swiper-item>
+      <scroll-view scroll-y="true" class="scoll-h">
+        <view>娱乐</view>
+      </scroll-view>
+    </swiper-item>
+    <swiper-item>
+      <scroll-view scroll-y="true" class="scoll-h">
+        <view>科技</view>
+      </scroll-view>
+    </swiper-item>
+    <swiper-item>
+      <scroll-view scroll-y="true" class="scoll-h">
+        <view>汽车</view>
+      </scroll-view>
+    </swiper-item>
+    <swiper-item>
+      <scroll-view scroll-y="true" class="scoll-h">
+        <view>体育</view>
+      </scroll-view>
+    </swiper-item>
+    <swiper-item>
+      <scroll-view scroll-y="true" class="scoll-h">
+        <view>财经</view>
+      </scroll-view>
+    </swiper-item>
+    <swiper-item>
+      <scroll-view scroll-y="true" class="scoll-h">
+        <view>軍事</view>
+      </scroll-view>
+    </swiper-item>
+    <swiper-item>
+      <scroll-view scroll-y="true" class="scoll-h">
+        <view>国际</view>
+      </scroll-view>
+    </swiper-item>
+    <swiper-item>
+      <scroll-view scroll-y="true" class="scoll-h">
+        <view>图片</view>
+      </scroll-view>
+    </swiper-item>
+    <swiper-item>
+      <scroll-view scroll-y="true" class="scoll-h">
+        <view>视频</view>
+      </scroll-view>
+    </swiper-item>
+    <swiper-item>
+      <scroll-view scroll-y="true" class="scoll-h">
+        <view>段子</view>
+      </scroll-view>
+    </swiper-item>
+    <swiper-item>
+      <scroll-view scroll-y="true" class="scoll-h">
+        <view>趣图</view>
+      </scroll-view>
+    </swiper-item>
+    <swiper-item>
+      <scroll-view scroll-y="true" class="scoll-h">
+        <view>问答</view>
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+</view>

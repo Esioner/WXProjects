@@ -1,0 +1,52 @@
+{
+  "pages": [
+    "pages/zhihu/zhihunews/zhihunews",
+    "pages/meiriyiju/meiriyiju",
+    "pages/selectedjoke/selectedjoke",
+    "pages/meiriyiwen/meiriyiwen",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/kaudiquery/kaudiquery",
+    "pages/meirixinwen/meirixinwen",
+    "pages/zhihu/newsdetail/newsdetail"
+  ],
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/zhihu/zhihunews/zhihunews",
+        "text": "每日新闻",
+        "iconPath": "res/image/news_normal.png",
+        "selectedIconPath": "res/image/news_selected.png"
+      },
+      {
+        "pagePath": "pages/meiriyiju/meiriyiju",
+        "text": "每日一句",
+        "iconPath": "res/image/weather_normal.png",
+        "selectedIconPath": "res/image/weather_select.png"
+      },
+      {
+        "pagePath": "pages/meiriyiwen/meiriyiwen",
+        "text": "每日一文",
+        "iconPath": "res/image/article_normal.png",
+        "selectedIconPath": "res/image/article_select.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "我的主页"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F7F7F7",
+    "navigationBarTitleText": "微信小程序",
+    "navigationBarTextStyle": "black"
+  },
+  "networkTimeout": {
+    "request": 20000,
+    "connectSocket": 20000,
+    "uploadFile": 20000,
+    "downloadFile": 20000
+  },
+  "debug": true
+}

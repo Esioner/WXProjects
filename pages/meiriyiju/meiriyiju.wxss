@@ -1,0 +1,93 @@
+/* pages/meiriyiju/meiriyiju.wxss */
+
+.root-view {
+  display: flex;
+  flex-direction: column;
+  padding-left: 5rpx;
+  padding-right: 5rpx;
+}
+
+.image-tag-view {
+  width: 100%;
+  height: 545rpx;
+}
+
+.image {
+  width: 740rpx;
+  height: 464rpx;
+}
+
+gesture-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.image-direction-right {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  right: 0;
+}
+
+.image-direction-left {
+  position: absolute;
+  left: 0;
+  width: 30px;
+  height: 30px;
+}
+
+.tag-view {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+}
+
+.tag-text {
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.tag {
+  border: 1px solid black;
+  margin-right: 10px;
+  background: #fff;
+  font-size: 16px;
+}
+
+.speaker-icon {
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+}
+
+.text-content {
+  color: #09bb07;
+  font-size: 20pt;
+}
+
+.text-note {
+  font-size: 17pt;
+}
+
+.editor-words-view {
+  widows: 100%;
+  margin-top: 20px;
+}
+
+.text-editor-words {
+  font-size: 13pt;
+  font-style: italic;
+}
+
+.text-trans {
+  font-size: 12pt;
+  margin-bottom: 20px;
+}
+
+.button-view {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

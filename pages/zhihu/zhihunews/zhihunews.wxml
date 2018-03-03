@@ -1,0 +1,23 @@
+<!--pages/zhihunews/zhihunews.wxml-->
+<view>
+  <swiper class='top-news-swiper' interval='5000' duration='1000' autoplay='true'>
+    <swiper-item wx:for='{{topNews}}'>
+      <view class='swiper-item-view' id='{{item.id}}' bindtap='chooseNews'>
+        <text class='swiper-news-title'>{{item.title}}</text>
+        <image class='swiper-news-image' src='{{item.image}}'></image>
+      </view>
+    </swiper-item>
+  </swiper>
+  <view>
+    <block wx:for='{{newsList}}'>
+      <view class='list-item-view' id='{{item.id}}' bindtap='chooseNews'>
+        <view class='list-item-image-view'>
+          <image class='list-item-image' src='{{item.images[0]}}'></image>
+        </view>
+        <view class='list-item-title-view'>
+          <text class='list-item-title'>{{item.title}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>
